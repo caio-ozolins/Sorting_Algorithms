@@ -7,4 +7,4 @@ include_directories(.)
 
 add_executable(Sorting_Algorithms
         main.c
-        main.h)
+        main.h sorting.c)

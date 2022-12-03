@@ -1,7 +1,12 @@
 # ninja log v5
-1	404	6917888997295982	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
-405	601	6917888999236948	Sorting_Algorithms.exe	c1b1a81119d507a3
-1	61	6917889134795777	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
-61	126	6917889135424294	Sorting_Algorithms.exe	c1b1a81119d507a3
 2	63	6917889282300933	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
 64	132	6917889282967359	Sorting_Algorithms.exe	c1b1a81119d507a3
+2	66	6917900830355509	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
+5	141	6917900831118391	CMakeFiles/Sorting_Algorithms.dir/sorting.c.obj	6aeeaa2404a25998
+141	209	6917900831773541	Sorting_Algorithms.exe	d0e5b3e643f988f9
+2	59	6917901054797023	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
+59	127	6917901055458228	Sorting_Algorithms.exe	d0e5b3e643f988f9
+2	58	6917901189643979	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
+59	126	6917901190294068	Sorting_Algorithms.exe	d0e5b3e643f988f9
+2	58	6917901460146181	CMakeFiles/Sorting_Algorithms.dir/main.c.obj	9c2b83cc67ede5c3
+59	125	6917901460775160	Sorting_Algorithms.exe	d0e5b3e643f988f9

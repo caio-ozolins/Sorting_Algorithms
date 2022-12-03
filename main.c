@@ -1,4 +1,5 @@
 #include "main.h"
+#include "sorting.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -14,6 +15,11 @@ int main(){
     }
 
     printf("Lista Original: ");
+    printArray(array);
+
+    insertionSort(array, ARRAY_LENGTH);
+
+    printf("\nLista Ordenada: ");
     printArray(array);
 
     return 0;
