@@ -10,7 +10,7 @@ int main(){
     // Cria um array com números aleatórios
     srand(time(NULL));
     for (int i = 0; i < ARRAY_LENGTH; ++i) {
-        array[i] = rand()%10;
+        array[i] = rand()%21;
     }
 
     printf("Lista Original: ");
