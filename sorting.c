@@ -49,3 +49,14 @@ void swap(int* x, int* y){ // Troca dois valores de lugar
     *x = *y;
     *y = temp;
 }
+void selectionSort(int array[], int lengthArray){
+    for (int i = 0; i < lengthArray - 1; ++i) { // No final o último elemento é ordenado automaticamente
+        int lowestIndex = i; // Assume que i é o menor elemento da seção não ordenada
+        for (int j = i + 1; j < lengthArray; ++j) {
+            if (array[j] < array[lowestIndex])
+                lowestIndex = j; // Muda a variavel caso encontre um valor menor que o atual
+        }
+        if (lowestIndex != i) // Troca os valores de lugar se necessário
+            swap(&array[i], &array[lowestIndex]);
+    }
+}
