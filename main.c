@@ -19,7 +19,7 @@ int main(){
     printArray(array);
 
     printf("\nChoose a sorting algorithm: \n");
-    printf("1. Insertion Sort\n2. Quicksort\n3. Selection Sort\n");
+    printf("1. Insertion Sort\n2. Quicksort\n3. Selection Sort\n4. Bubble Sort\n");
     scanf("%d", &sortAlg);
     printf("\n");
 
@@ -32,6 +32,9 @@ int main(){
             break;
         case 3:
             selectionSort(array, ARRAY_LENGTH);
+            break;
+        case 4:
+            bubbleSort(array, ARRAY_LENGTH);
             break;
         default:
             printf("Invalid input.");

@@ -60,3 +60,11 @@ void selectionSort(int array[], int lengthArray){
             swap(&array[i], &array[lowestIndex]);
     }
 }
+void bubbleSort(int array[], int lengthArray){
+    for (int i = 0; i < lengthArray; ++i) {
+        for (int j = 0; j < lengthArray - 1; ++j) { // Não existe um elemento à direita do último para comparação
+            if (array[j] > array[j+1])
+                swap(&array[j], &array[j+1]);
+        }
+    }
+}
