@@ -61,10 +61,16 @@ void selectionSort(int array[], int lengthArray){
     }
 }
 void bubbleSort(int array[], int lengthArray){
-    for (int i = 0; i < lengthArray; ++i) {
-        for (int j = 0; j < lengthArray - 1; ++j) { // Não existe um elemento à direita do último para comparação
-            if (array[j] > array[j+1])
-                swap(&array[j], &array[j+1]);
+    int hasSwapped;
+    int i = 0;
+    do {
+        hasSwapped = 0;
+        for (int j = 0; j < lengthArray - 1 - i; ++j) { // -1, pois não existe um elemento à direita do último para comparação, -i, pois no final de cada passada o último número sempre vai estar ordenado
+            if (array[j] > array[j+1]) {
+                swap(&array[j], &array[j + 1]);
+                hasSwapped = 1; // avisa que ouve uma troca
+            }
         }
-    }
+        i++;
+    } while (hasSwapped); // Para o algoritmo caso o array já esteja ordenado
 }
