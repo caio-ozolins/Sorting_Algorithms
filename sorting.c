@@ -33,7 +33,7 @@ int partition(int array[], int low, int high){
 
     int pivotValue = array[high];
 
-    int i = low; // Variavel criada parar guardar a posição que começa os valores maiores que o pivo
+    int i = low; // Variavel criada para guardar a posição que começa os valores maiores que o pivo
     for (int j = low; j < high; ++j) {
         if (array[j] <= pivotValue) { // Coloca os valores menores ou iguais ao pivo a esquerda
             swap(&array[i], &array[j]);
