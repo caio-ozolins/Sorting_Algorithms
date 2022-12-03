@@ -19,13 +19,16 @@ int main(){
     printArray(array);
 
     printf("\nChoose a sorting algorithm: \n");
-    printf("1. Insertion Sort\n");
+    printf("1. Insertion Sort\n2. Quicksort\n");
     scanf("%d", &sortAlg);
     printf("\n");
 
     switch (sortAlg) {
         case 1:
             insertionSort(array, ARRAY_LENGTH);
+            break;
+        case 2:
+            quicksort(array, ARRAY_LENGTH);
             break;
         default:
             printf("Invalid input.");

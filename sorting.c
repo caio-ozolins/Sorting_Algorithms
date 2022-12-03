@@ -1,5 +1,8 @@
 #include "sorting.h"
 
+#include <stdlib.h>
+#include <time.h>
+
 void insertionSort(int array[], int lengthArray){
     for (int i = 1; i < lengthArray; ++i) { // O primeiro elemento já é considerado ordenado
         int aux = array[i]; // Variavel auxiliar recebe o valor do elemento
@@ -10,4 +13,39 @@ void insertionSort(int array[], int lengthArray){
         }
         array[j + 1] = aux; // Coloca aux no local correto
     }
+}
+void quicksort(int array[], int lengthArray){ // Função criada por comodidade (só é necessário passar o array e tamanho do array)
+    srand(time(NULL));
+    quicksortRecursion(array, 0, lengthArray - 1);
+}
+void quicksortRecursion(int array[], int low, int high){
+    if (low < high){
+        int pivotIndex = partition(array, low, high); // Particiona o array e retorna a posição do pivo
+        quicksortRecursion(array, low, pivotIndex - 1); // Faz o quicksort a esquerda do pivo
+        quicksortRecursion(array, pivotIndex + 1, high); // Faz o quicksort à direita do pivo
+    }
+}
+int partition(int array[], int low, int high){
+    int pivotIndex = low + (rand() % (high - low)); // Escolhe um elemento aleatório (entre low e high) para ser o pivo
+
+    if (pivotIndex != high)
+        swap(&array[pivotIndex], &array[high]); // Troca o pivo de lugar com o último elemento da partição atual
+
+    int pivotValue = array[high];
+
+    int i = low; // Variavel criada parar guardar a posição que começa os valores maiores que o pivo
+    for (int j = low; j < high; ++j) {
+        if (array[j] <= pivotValue) { // Coloca os valores menores ou iguais ao pivo a esquerda
+            swap(&array[i], &array[j]);
+            i++;
+        }
+    }
+    swap(&array[i], &array[high]); // Como sabemos que a variavel i é o começo dos números maiores que o pivo trocamos ela de lugar com o pivo
+
+    return i; // agora i contém a posição do pivo
+}
+void swap(int* x, int* y){ // Troca dois valores de lugar
+    int temp = *x;
+    *x = *y;
+    *y = temp;
 }
